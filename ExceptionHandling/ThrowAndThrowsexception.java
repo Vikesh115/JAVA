@@ -1,37 +1,37 @@
-// package ExceptionHandling;
+package ExceptionHandling;
+import java.util.Scanner;
+public class ThrowAndThrowsexception {
+    public static void main(String[] args)
+    {
+        try {
+            methodA ();
+            System.out.println("Exit try for main() ");
+        }
+        catch (ArithmeticException ex)
+        {
+            System.out.println("ArithmeticException caught....");
+            ex.printStackTrace();
+        }
+        System.out.println("Exit main successfully");
+    }
 
-// public class ThrowAndThrowsexception {
+
+public static void methodA() throws ArithmeticException {
+
+    int a=5;
+    int c;
+    Scanner in = new Scanner (System.in);
+
+    System.out.println("Enter numeric value for variable b");
+
+    int b = in.nextInt();
+
+    if(b==0)
+       throw new ArithmeticException();
+
+    else 
+       c = a/b;
     
-// }
-
-// // Declaring exceptions
-// public void methodD() throws XxxException, YyyException {
-//     // method body throw XxxException and YyyException
-// }
-
-// /*
-//  Throwing an Exception
-//  When a java operation encounters an abnormal situation, the method containing the erroneous statement shall create an appropriate Exception 
-//  object and throw it to the java runtime via the statement
-//  "throw XxxException"
-//  */
-// public void methodD() throws XxxException, YyyException {
-//     // method body throw XxxException and YyyException
-//     // method's body
-//     ...
-//     ... 
-//     // XxxException occurs 
-//     if (...)
-//        throw new XxxException(...); // construct an XxxException object and throw to JVM
-//      ... 
-//      // Yyyexception occurs
-//      if( ... )
-     
-//         throw new YyyException(...); // construct an YyyException object and throw to JVM
-//      ... 
-// }
-
-
-//  /*
-//   Catching an exception using TRY CATCh
-//   */
+    System.out.println("Exit methodA()");   
+ }
+}
