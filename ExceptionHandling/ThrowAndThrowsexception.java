@@ -25,13 +25,16 @@ public static void methodA() throws ArithmeticException {
     System.out.println("Enter numeric value for variable b");
 
     int b = in.nextInt();
+    in.close();
 
     if(b==0)
        throw new ArithmeticException();
 
-    else 
-       c = a/b;
-    
-    System.out.println("Exit methodA()");   
+    else{ 
+       c= a/b;
+       System.out.println(c);
+    }  
+    System.out.println("Exit methodA()"); 
+      
  }
 }
