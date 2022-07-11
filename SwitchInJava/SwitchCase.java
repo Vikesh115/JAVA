@@ -5,6 +5,7 @@ public class SwitchCase {
 		int x=0,y=0;
 		System.out.println("Enter a number ");
 		Scanner sc= new Scanner(System.in);
+		sc.close();
 		char move = sc.next().charAt(0);
 		switch(move)
 		{
