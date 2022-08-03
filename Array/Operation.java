@@ -1,11 +1,10 @@
 package Array;
-
-// import javax.lang.model.util.ElementScanner14;
-
-//import javax.lang.model.util.ElementScanner14;
-
+import java.util.Scanner;
 public class Operation {
-    public static int[] insertOperation(int arr[],int pos,int val){
+
+
+    public static int[] insertOperation(int arr[],int pos,int val)
+    {
        int index = arr.length+1;
         int newArr[] = new int[index];
         for(int i =0; i<index; i++)
@@ -19,7 +18,10 @@ public class Operation {
         }
         return newArr;
     }
-    public static int[] deleteOperation(int arr[], int pos){
+
+
+    public static int[] deleteOperation(int arr[], int pos)
+    {
         int index = arr.length-1;
         int deletedArray[] = new int[index];
         for(int i=0; i< index+1; i++)
@@ -34,33 +36,30 @@ public class Operation {
         }
         return deletedArray;
     }
+
+public static void main(String args[])
+{
+   Scanner sc = new Scanner(System.in);
+   int n = sc.nextInt();
+   int pos = sc.nextInt();
+   int val = sc.nextInt();
+   int arr[] = new int[n];
+   for(int i=0; i<n; i++)
+   {
+    arr[i] = sc.nextInt();
+   }
+   new Operation();
+   System.out.println(Operation.insertOperation(arr, pos, val));
+   for(int i=0; i<n; i++)
+    {
+        System.out.println(arr[i]);
+    }
+   new Operation();
+   System.out.println(Operation.deleteOperation(arr, pos));
+   for(int i=0; i<n; i++)
+    {
+        System.out.println(arr[i]);
+    }
+   sc.close();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// int n=arr.length;
-//         int[] newArr=new int[n+1];
-//         int i=newArr.length-1;
-//         for(i=0;i<newArr.length;i++){
-//             if(i==pos-1) 
-//                 newArr[i]=val;
-//             else if(i > pos-1)
-//                 newArr[i]=arr[i-1];
-//             else
-//                 newArr[i]=arr[i];
-//         }
-        
-//         return newArr;
+}
